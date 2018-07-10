@@ -21,7 +21,12 @@ export default class PropEditor extends Component {
     return (
       <Fragment>
         <Children {...this.state} />
-        <ReactJson src={this.state} onEdit={this.onEdit.bind(this)} />
+        <ReactJson
+          displayDataTypes={false}
+          name="props"
+          src={this.state}
+          onEdit={this.onEdit.bind(this)}
+        />
       </Fragment>
     );
   }
