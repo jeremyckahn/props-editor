@@ -12,7 +12,11 @@ class DataVisualizer extends Component {
           This is a read-only view of the <code>props</code> that are being
           passed to the child:
         </h1>
-        <ReactJson src={this.props} />
+        <ReactJson
+          enableClipboard={false}
+          name="child props (read-only)"
+          src={this.props}
+        />
         <hr />
       </div>
     );
