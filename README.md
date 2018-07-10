@@ -1,41 +1,35 @@
-# React Project Starter
+# props-editor
 
-### My personal starting point for React projects
+`props-editor` is a React component that is either a handy development tool, an affront to React, neither of these things, or possibly both at the same time. `props-editor` is a component that you wrap another component with. This child component will then be given a JSON editing UI to modify its `props` with.
 
-This project provides a bootstrap for:
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-  * Authoring in ES6
-  * Running tests (written in [Mocha](https://mochajs.org/))
-  * Browser dev tool support
-  * A build process
-  * Versioned releases
+import PropsEditor from '../src/index.js';
 
-## Getting started
-
-Here's a handy snippet you can add to your `.bash_profile` to create new apps easily:
-
-```
-function new_react_project() {
-  if [ -z "$1" ];
-  then
-    "Must specify a project name as the first argument"
-    return
-  else
-    git clone --depth=1 https://github.com/jeremyckahn/props-editor.git "$1"
-    cd "$1" || exit 1
-    rm -rf .git
-    find . -type f -exec sed -i "" "s/props-editor/$1/g" {} \;
-    git init
-    git add --all
-    git commit -m "Initial commit"
-    npm install
-  fi
-}
+ReactDOM.render(
+  <PropsEditor>
+    <input
+      value="This can only be modified via props!"
+      type="text"
+      style={{ fontSize: '2em', width: '20em' }}
+      readOnly
+    />
+  </PropsEditor>,
+  document.getElementById('app')
+);
 ```
 
-## Authoring in ES6
+![A screenshot of props-editor](./screenshot.png)
 
-Painlessly write your code as beautiful ES6!  Thanks to [Webpack](https://webpack.github.io/), all of your code will be compiled down to more compatible ES5 syntax that can be easily used by downstream projects.
+## Why?
+
+Sometimes during development, it is handy to directly modify the `props` of a React component to see how it responds. This component provides a way to achieve that.
+
+## Why not React DevTools?
+
+Most of the time, React DevTools are a better solution for this need. This tool was created for situations where React DevTools are either unavailable or impractical. For example, if you'd like to stand up an internal demo of a project to share with folks who are not engineers, it may be more effective to provide a props editing UI in the application itself, rather than instructing them how to install React RevTools and modify the props that way.
 
 ## Running tests (written in Mocha)
 

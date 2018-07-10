@@ -8,7 +8,7 @@ ReactDOM.render(
     <input
       value="This can only be modified via props!"
       type="text"
-      style={{ fontSize: '2em' }}
+      style={{ fontSize: '2em', width: '20em' }}
       readOnly
     />
   </PropsEditor>,
