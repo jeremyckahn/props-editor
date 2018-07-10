@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactJson from 'react-json-view';
 import ReactDOM from 'react-dom';
 
-import PropEditor from '../src/index.js';
+import PropsEditor from '../src/index.js';
 
 class DataVisualizer extends Component {
   render() {
@@ -24,8 +24,8 @@ class DataVisualizer extends Component {
 }
 
 ReactDOM.render(
-  <PropEditor>
+  <PropsEditor>
     <DataVisualizer foo="bar" object={{ anArray: [1, 2, 3] }} />
-  </PropEditor>,
+  </PropsEditor>,
   document.getElementById('app')
 );

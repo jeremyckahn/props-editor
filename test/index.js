@@ -10,18 +10,18 @@ class ReactJsonViewStub extends Component {}
 
 const StubChild = () => {};
 
-const PropEditor = proxyquire.noCallThru().load('../src/index', {
+const PropsEditor = proxyquire.noCallThru().load('../src/index', {
   'react-json-view': ReactJsonViewStub,
 }).default;
 
 let component;
 
-describe('PropEditor', () => {
+describe('PropsEditor', () => {
   beforeEach(() => {
     component = shallow(
-      <PropEditor>
+      <PropsEditor>
         <StubChild foo="bar" />
-      </PropEditor>
+      </PropsEditor>
     );
   });
 

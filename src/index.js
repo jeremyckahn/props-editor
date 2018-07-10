@@ -3,7 +3,7 @@ import { object } from 'prop-types';
 
 import ReactJson from 'react-json-view';
 
-export default class PropEditor extends Component {
+export default class PropsEditor extends Component {
   constructor(props) {
     super(...arguments);
 
@@ -32,6 +32,6 @@ export default class PropEditor extends Component {
   }
 }
 
-PropEditor.propTypes = {
+PropsEditor.propTypes = {
   children: object.isRequired,
 };
