@@ -6,13 +6,12 @@ import proxyquire from 'proxyquire';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-class JsonEditorStub extends Component {}
+class ReactJsonViewStub extends Component {}
 
 const StubChild = () => {};
 
 const PropEditor = proxyquire.noCallThru().load('../src/index', {
-  'jsoneditor-react': { JsonEditor: () => JsonEditorStub },
-  'jsoneditor-react/es/editor.min.css': {},
+  'react-json-view': ReactJsonViewStub,
 }).default;
 
 let component;

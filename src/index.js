@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { object } from 'prop-types';
 
-import { JsonEditor as Editor } from 'jsoneditor-react';
-import 'jsoneditor-react/es/editor.min.css';
+import ReactJson from 'react-json-view';
 
 export default class PropEditor extends Component {
   constructor(props) {
@@ -12,16 +11,17 @@ export default class PropEditor extends Component {
     delete this.state.children;
   }
 
+  onEdit({ updated_src }) {
+    this.setState(Object.assign({}, updated_src));
+  }
+
   render() {
     const Children = this.props.children.type;
 
     return (
       <Fragment>
         <Children {...this.state} />
-        <Editor
-          value={this.state}
-          onChange={state => this.setState(Object.assign({}, state))}
-        />
+        <ReactJson src={this.state} onEdit={this.onEdit.bind(this)} />
       </Fragment>
     );
   }
