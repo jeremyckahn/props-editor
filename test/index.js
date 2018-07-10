@@ -12,9 +12,7 @@ const StubChild = () => {};
 
 const PropEditor = proxyquire.noCallThru().load('../src/index', {
   'jsoneditor-react': { JsonEditor: () => JsonEditorStub },
-  'jsoneditor-react/es/editor.min.css': {
-    '@noCallThru': true,
-  },
+  'jsoneditor-react/es/editor.min.css': {},
 }).default;
 
 let component;
