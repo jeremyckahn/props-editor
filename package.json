@@ -5,7 +5,8 @@
   "main": "dist/app.js",
   "scripts": {
     "build": "webpack",
-    "deploy": "npm run build && gh-pages -d dist",
+    "build:extras": "webpack --config webpack.extras.config.js",
+    "deploy": "npm run build && npm run build:extras && gh-pages -d dist",
     "doc": "jsdoc -c .jsdoc src",
     "doc:live": "concurrently --kill-others \"npm run doc:watch\" \"npm run doc:view\"",
     "doc:view": "live-server dist/doc --port=9124",
@@ -30,6 +31,7 @@
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "concurrently": "^3.6.0",
+    "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
