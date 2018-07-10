@@ -30,4 +30,15 @@ describe('PropEditor', () => {
       assert.deepEqual(component.state(), { foo: 'bar' });
     });
   });
+
+  describe('updating child props', () => {
+    beforeEach(() => {
+      component.instance().onEdit({ updated_src: { foo: 'baz' } });
+      component.update();
+    });
+
+    it('updates the props of the child', () => {
+      assert.equal(component.find(StubChild).props().foo, 'baz');
+    });
+  });
 });
