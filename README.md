@@ -1,5 +1,9 @@
 # props-editor
 
+```
+npm install --save props-editor
+```
+
 `props-editor` is a React component that is either a handy development tool, an affront to React, neither of these things, or possibly both at the same time. `props-editor` is a component that you wrap another component with. This child component will then be given a JSON editing UI to modify its `props` with.
 
 ```jsx
@@ -21,7 +25,7 @@ ReactDOM.render(
 );
 ```
 
-![A screenshot of props-editor](./screenshot.png)
+[![A screenshot of props-editor](./screenshot.png)](https://jeremyckahn.github.io/props-editor/)
 
 ## Why?
 
