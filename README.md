@@ -33,7 +33,7 @@ Sometimes during development, it is handy to directly modify the `props` of a Re
 
 ## Why not React DevTools?
 
-Most of the time, React DevTools are a better solution for this need. This tool was created for situations where React DevTools are either unavailable or impractical. For example, if you'd like to stand up an internal demo of a project to share with folks who are not engineers, it may be more effective to provide a props editing UI in the application itself, rather than instructing them how to install React RevTools and modify the props that way.
+Most of the time, React DevTools are a better solution for this need. This tool was created for situations where React DevTools are either unavailable or impractical. For example, if you'd like to stand up an internal demo of a project to share with folks who are not engineers, it may be more effective to provide a props editing UI in the application itself, rather than instructing them how to install React DevTools and modify the props that way.
 
 ## Running tests (written in Mocha)
 
