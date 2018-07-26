@@ -1,6 +1,6 @@
 {
   "name": "props-editor",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "My starting point for React apps",
   "main": "dist/app.js",
   "scripts": {
