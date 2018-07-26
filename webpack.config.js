@@ -18,6 +18,6 @@ module.exports = Object.assign(commonConfig, {
     libraryTarget: 'umd',
     umdNamedDefine: true,
   },
-  externals: ['react', 'react-dom'],
+  externals: ['react', 'react-dom', 'react-json-view'],
   plugins: [new CleanWebpackPlugin([dist]), new Webpack.BannerPlugin(version)],
 });
